@@ -1,10 +1,6 @@
 # .platform/services.yaml
 
-php:
-    type: php:8.1  # The PHP runtime version (you can adjust this based on your needs)
-    disk: 1024     # Disk space allocated for the PHP service (in MB)
-    mount_path: "/var/www/html"  # The directory for your PHP application files
-
+# Configure the MariaDB service
 mariadb:
-    type: mariadb:11.4  # The MariaDB service version
-    disk: 256           # Disk space allocated for the MariaDB service (in MB)
+    type: mariadb:11.4  # Specify MariaDB version 11.4
+    disk: 256  # Allocate 256MB of disk space for the MariaDB service
