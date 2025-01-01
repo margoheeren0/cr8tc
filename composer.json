@@ -1,0 +1,14 @@
+{
+  "name": "yourname/rect5s",
+  "description": "A PHP project for Platform.sh deployment",
+  "require": {
+    "php": "^8.4",
+    "ext-pdo": "*",  # Ensure PDO extension is available
+    "ext-mysqli": "*"  # Ensure MySQLi extension is available
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "echo 'Composer install completed!'"
+    ]
+  }
+}
