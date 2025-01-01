@@ -1,0 +1,20 @@
+# .platform.app.yaml
+
+# The name of the application, must be unique within the project
+name: app
+
+# The runtime for the application (PHP 8.4 in this case)
+type: 'php:8.4'
+
+# Define writable directories
+mounts:
+  'web/uploads':
+    source: local  # local source indicates it's a local directory in the container
+    source_path: uploads  # the relative path within the source
+
+# The size of the persistent disk in MB
+disk: 256
+
+# Relationships between this application and services or other apps
+relationships:
+  mariadb: 'mariadb:mysql'  # linking to the MariaDB service
