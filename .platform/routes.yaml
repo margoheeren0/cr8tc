@@ -1,0 +1,11 @@
+# .platform/routes.yaml
+
+# Route to handle requests to the 'www' subdomain
+"https://www.{default}/":
+    type: upstream
+    upstream: "app:http"  # Routes traffic to the 'app' service on the 'http' port
+
+# Route to handle non-www requests and redirect them to the 'www' subdomain
+"https://{default}/":
+    type: redirect
+    to: "https://www.{default}/"  # Redirects all non-www traffic to the www subdomain
